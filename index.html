@@ -1,189 +1,190 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jual Tiket Event</title>
+<meta charset="UTF-8">
+<title>Evolv Community</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f5f7;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-    /* HEADER */
-    header {
-      background: #1a73e8;
-      padding: 20px;
-      color: white;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    }
+body {
+  background: #0b0b14;
+  color: #fff;
+}
 
-    /* HERO */
-    .hero {
-      background: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1200&q=60') center/cover;
-      height: 260px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 0 3px 8px rgba(0,0,0,0.4);
-      font-size: 32px;
-      font-weight: bold;
-    }
+/* NAV */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
 
-    .container {
-      max-width: 950px;
-      margin: auto;
-      padding: 20px;
-    }
+header h1 {
+  color: #7cf5ff;
+}
 
-    /* CARD TIKET */
-    .ticket-card {
-      background: white;
-      padding: 20px;
-      border-radius: 14px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
+nav a {
+  margin-left: 20px;
+  color: #ccc;
+}
 
-    .ticket-card img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 12px;
-    }
+nav a:hover {
+  color: #7cf5ff;
+}
 
-    .btn {
-      background: #1a73e8;
-      color: white;
-      padding: 12px 22px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: radial-gradient(circle at top, #1b1b3a, #0b0b14);
+}
 
-    .btn:hover {
-      background: #0d47a1;
-    }
+.hero h2 {
+  font-size: 48px;
+}
 
-    /* MODAL */
-    .modal-bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      display: none;
-      align-items: center;
-      justify-content: center;
-    }
-    .modal {
-      background: white;
-      padding: 25px;
-      width: 350px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
+.hero p {
+  max-width: 650px;
+  margin: 20px auto;
+  opacity: 0.8;
+}
 
-    /* WA FLOATING BUTTON */
-    .wa-float {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: #25d366;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 30px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-  </style>
+.btn {
+  padding: 15px 35px;
+  background: linear-gradient(135deg, #7cf5ff, #8f7cff);
+  color: #000;
+  border-radius: 40px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+/* SECTION */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #141428;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* FORM */
+form {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+input, button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+input {
+  background: #1c1c3a;
+  color: #fff;
+}
+
+button {
+  background: #7cf5ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.6;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Toko Tiket Online</h1>
-  <p>Beli tiket event favoritmu tanpa ribet!</p>
+  <h1>Evolv</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#blog">Blog</a>
+    <a href="#join">Join</a>
+  </nav>
 </header>
 
 <div class="hero">
-  Event Terbaik Untukmu ✨
+  <h2>Build Your Digital Future</h2>
+  <p>Komunitas edukasi Web3, AI, dan skill digital masa depan.</p>
+  <a href="#join" class="btn">Join Community</a>
 </div>
 
-<div class="container">
-
-  <!-- EVENT 1 -->
-  <div class="ticket-card">
-    <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229?auto=format&fit=crop&w=1100&q=60">
-    <h2>Konser Musik Akhir Tahun</h2>
-    <p>Tanggal: 30 Desember 2025</p>
-    <p>Lokasi: Jakarta Convention Center</p>
-    <p>Harga: <b>Rp150.000</b></p>
-    <button class="btn" onclick="beli('Konser Musik Akhir Tahun')">Beli Tiket</button>
+<section id="about">
+  <h2>What You’ll Get</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Learning</h3>
+      <p>Materi Web3, AI, dan teknologi masa depan.</p>
+    </div>
+    <div class="card">
+      <h3>Community</h3>
+      <p>Diskusi, networking, dan kolaborasi.</p>
+    </div>
+    <div class="card">
+      <h3>Opportunities</h3>
+      <p>Event, mentorship, dan project digital.</p>
+    </div>
   </div>
+</section>
 
-  <!-- EVENT 2 -->
-  <div class="ticket-card">
-    <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1100&q=60">
-    <h2>Festival Kuliner Nusantara</h2>
-    <p>Tanggal: 12–14 Januari 2026</p>
-    <p>Lokasi: Bandung</p>
-    <p>Harga: <b>Rp50.000</b></p>
-    <button class="btn" onclick="beli('Festival Kuliner Nusantara')">Beli Tiket</button>
+<section id="blog">
+  <h2>Latest Articles</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>What is Web3?</h3>
+      <p>Pengenalan Web3 dan masa depan internet.</p>
+    </div>
+    <div class="card">
+      <h3>AI for Beginner</h3>
+      <p>Cara memulai belajar AI dari nol.</p>
+    </div>
+    <div class="card">
+      <h3>Digital Skill 2026</h3>
+      <p>Skill yang wajib dikuasai di masa depan.</p>
+    </div>
   </div>
+</section>
 
-</div>
+<section id="join">
+  <h2 style="text-align:center">Join the Waitlist</h2>
+  <form>
+    <input type="text" placeholder="Nama" required>
+    <input type="email" placeholder="Email" required>
+    <button type="submit">Join Now</button>
+  </form>
+</section>
 
-<!-- MODAL -->
-<div class="modal-bg" id="modal">
-  <div class="modal">
-    <h3 id="judul-tiket"></h3>
-    <label>Nama:</label>
-    <input id="nama" style="width:100%; padding:8px; margin-bottom:10px;" />
-
-    <label>No. WhatsApp:</label>
-    <input id="wa" style="width:100%; padding:8px; margin-bottom:10px;" />
-
-    <button class="btn" onclick="kirim()">Kirim</button>
-    <button class="btn" style="background:#777; margin-left:10px;" onclick="tutup()">Batal</button>
-  </div>
-</div>
-
-<!-- WA FLOATING BUTTON -->
-<div class="wa-float" onclick="window.open('https://wa.me/6281234567890','_blank')">
-  ☎
-</div>
-
-<script>
-  let tiketDipilih = "";
-
-  function beli(nama) {
-    tiketDipilih = nama;
-    document.getElementById("judul-tiket").innerText = "Pesan: " + nama;
-    document.getElementById("modal").style.display = "flex";
-  }
-
-  function tutup() {
-    document.getElementById("modal").style.display = "none";
-  }
-
-  function kirim() {
-    let nama = document.getElementById("nama").value;
-    let wa = document.getElementById("wa").value;
-
-    window.open(
-      `https://wa.me/6281234567890?text=Halo! Saya ingin pesan tiket *${tiketDipilih}*.\nNama: ${nama}\nWA: ${wa}`,
-      "_blank"
-    );
-  }
-</script>
+<footer>
+  © 2026 Evolv Community
+</footer>
 
 </body>
 </html>
