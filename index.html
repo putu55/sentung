@@ -12,6 +12,50 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+  .photo-section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.photo-stack {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+
+.photo {
+  width: 100%;
+  border-radius: 20px;
+  position: absolute;
+  transition: 0.3s;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.p1 {
+  transform: rotate(-8deg);
+  top: 0;
+  left: -20px;
+  z-index: 1;
+}
+
+.p2 {
+  transform: rotate(5deg);
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.p3 {
+  transform: rotate(-3deg);
+  top: 40px;
+  left: 0;
+  z-index: 3;
+}
+
+.photo:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
 
 body {
   background: #0b0b14;
@@ -44,6 +88,15 @@ nav a:hover {
   padding: 120px 20px;
   background: radial-gradient(circle at top, #1b1b3a, #0b0b14);
 }
+
+  <section class="photo-section">
+  <div class="photo-stack">
+    <img src="ai1.jpg" class="photo p1">
+    <img src="ai2.jpg" class="photo p2">
+    <img src="ai3.jpg" class="photo p3">
+  </div>
+</section>
+
 
 .hero h2 {
   font-size: 48px;
