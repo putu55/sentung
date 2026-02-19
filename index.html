@@ -6,6 +6,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+  .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 60px;
+  background: radial-gradient(circle at top, #1b1b3a, #0b0b14);
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  opacity: 0.8;
+}
+
+.hero-images {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.tilt {
+  position: absolute;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  transition: 0.4s ease;
+}
+
+.t1 {
+  transform: rotate(-8deg);
+  top: 0;
+  left: -20px;
+}
+
+.t2 {
+  transform: rotate(6deg);
+  top: 40px;
+  left: 20px;
+}
+
+.tilt:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -188,18 +240,18 @@ footer {
 </header>
 
 <div class="hero">
-  <h2>Build Your Digital Future</h2>
-  <p>Komunitas edukasi Web3, AI, dan skill digital masa depan.</p>
-  <a href="#join" class="btn">Join Community</a>
+  <div class="hero-text">
+    <h2>Build Your Digital Future</h2>
+    <p>Komunitas edukasi Web3, AI, dan skill digital masa depan.</p>
+    <a href="#join" class="btn">Join Community</a>
+  </div>
+
+  <div class="hero-images">
+    <img src="ai1.jpg" class="tilt t1">
+    <img src="ai2.jpg" class="tilt t2">
+  </div>
 </div>
 
-<section class="photo-section">
-  <div class="photo-stack">
-    <img src="ai1.jpg" class="photo p1">
-    <img src="ai2.jpg" class="photo p2">
-    <img src="ai3.jpg" class="photo p3">
-  </div>
-</section>
 
 
 <section id="about">
