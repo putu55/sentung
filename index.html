@@ -224,6 +224,24 @@ body {
 .hero-content h2 {
   text-shadow: 0 0 20px rgba(124,245,255,0.4);
 }
+.hero-title {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #7cf5ff, #8f7cff, #7cf5ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+  text-shadow: 0 0 30px rgba(124,245,255,0.4);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+  
 /* NAV */
 
 header {
@@ -484,7 +502,7 @@ footer {
 
 
 <section id="about">
-  <h2>What You’ll Get</h2>
+  <h2 class="hero-title">Build The Future Together</h2>
   <div class="grid">
     <div class="card">
       <h3>Learning</h3>
