@@ -232,11 +232,17 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 9999; /* BIKIN PALING ATAS */
   background: rgba(11,11,20,0.5);
   backdrop-filter: blur(10px);
 }
+  .bg {
+  pointer-events: none; /* BIAR GAMBAR TIDAK NUTUP KLIK */
+}
 
+.hero::after {
+  pointer-events: none; /* Overlay juga tidak ganggu */
+}
 /* Hamburger */
 .hamburger {
   width: 30px;
@@ -488,7 +494,12 @@ document.querySelectorAll("section").forEach(sec => {
   observer.observe(sec);
 });
 </script>
-
+  
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
   
 </body>
 </html>
