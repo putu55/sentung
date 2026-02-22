@@ -126,17 +126,7 @@
   z-index: 1;
 }
   
-@keyframes float1 {
-  0% { transform: rotate(-8deg) translateY(0px); }
-  50% { transform: rotate(-8deg) translateY(-15px); }
-  100% { transform: rotate(-8deg) translateY(0px); }
-}
 
-@keyframes float2 {
-  0% { transform: rotate(6deg) translateY(0px); }
-  50% { transform: rotate(6deg) translateY(15px); }
-  100% { transform: rotate(6deg) translateY(0px); }
-}
 
 .hero-images::before {
   content: "";
@@ -159,15 +149,6 @@
   animation: float2 7s ease-in-out infinite;
 }
   
-  .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 120px 60px;
-  background: radial-gradient(circle at top, #1b1b3a, #0b0b14);
-  flex-wrap: wrap;
-}
-
 .hero-text {
   max-width: 520px;
 }
@@ -199,11 +180,6 @@ html {
   opacity: 0.8;
 }
 
-.hero-images {
-  position: relative;
-  width: 350px;
-  height: 350px;
-}
 
 .fade-in {
   opacity: 0;
@@ -216,33 +192,9 @@ html {
   transform: translateY(0);
 }
   
-.tilt {
-  position: absolute;
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-  transition: 0.4s ease;
-  will-change: transform;
-}
 
-.t1 {
-  transform: rotate(-8deg);
-  top: 0;
-  left: -20px;
-}
 
-.t2 {
-  transform: rotate(6deg);
-  top: 40px;
-  left: 20px;
-}
-.t3 {
-  transform: rotate(-3deg);
-  top: 80px;
-  left: 0px;
-  animation: float1 8s ease-in-out infinite;
-}
-  
+
 .tilt:hover {
   animation-play-state: paused;
   transform: scale(1.05);
@@ -421,15 +373,6 @@ footer {
     <p>Komunitas edukasi Web3, AI, dan skill digital masa depan.</p>
     <a href="#join" class="btn">Join Community</a>
   </div>
-
-</div>
-  <div class="hero-images">
-    <img src="ai1.jpg" class="tilt t1">
-    <img src="ai2.jpg" class="tilt t2">
-    <img src="ai3.jpg" class="tilt t3">
-  </div>
-</div>
-
 
 
 <section id="about">
