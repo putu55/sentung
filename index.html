@@ -355,10 +355,35 @@ nav.active {
   box-shadow: 0 0 20px rgba(124,245,255,0.6);
 }
 /* SECTION */
+  
 section {
   max-width: 1100px;
   margin: auto;
-  padding: 80px 40px;
+  padding: 120px 40px;
+}
+  section:nth-child(even) {
+  background: rgba(255,255,255,0.02);
+}
+
+section:nth-child(odd) {
+  background: transparent;
+}
+  section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+section h2::after {
+  content: "";
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg,#7cf5ff,#8f7cff);
+  position: absolute;
+  left: 20%;
+  bottom: -8px;
+  border-radius: 5px;
 }
 
 .grid {
