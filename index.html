@@ -318,7 +318,42 @@ nav.active {
 }
 
   header h1 { color: #7cf5ff; } nav a { margin-left: 20px; color: #ccc; } nav a:hover { color: #7cf5ff; } .btn { padding: 15px 35px; background: linear-gradient(135deg, #7cf5ff, #8f7cff); color: #000; border-radius: 40px; font-weight: bold; display: inline-block; margin-top: 30px; }
-  
+  .social {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.social h2 {
+  margin-bottom: 40px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  color: #7cf5ff;
+  font-size: 22px;
+  transition: 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.social-links a:hover {
+  background: linear-gradient(135deg, #7cf5ff, #8f7cff);
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(124,245,255,0.6);
+}
 /* SECTION */
 section {
   max-width: 1100px;
