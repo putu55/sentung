@@ -1,4 +1,87 @@
-<h1>Blog Sentung</h1>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  background: #111827;
+  padding: 20px 0;
+}
+
+.navbar .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar a.active {
+  color: #2563eb;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Hero */
+.blog-hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.blog-hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.blog-hero p {
+  color: #94a3b8;
+}
+
+/* Blog Cards */
+.blog-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px 20px 80px;
+  flex-wrap: wrap;
+}
+
+.blog-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  width: 300px;
+  transition: 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  background: #2563eb;
+}
+
+.blog-card a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="#community">Community</a>
+  </nav>
+</header><h1>Blog Sentung</h1>
 
 <div class="article">
   <h2><a href="web3.html">Apa Itu Web3?</a></h2>
@@ -10,3 +93,53 @@
   <p>Panduan lengkap untuk pemula belajar Artificial Intelligence...</p>
 </div>
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - YourBrand</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">YourBrand</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html" class="active">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Blog -->
+  <section class="blog-hero">
+    <h1>Latest Articles</h1>
+    <p>Insights, updates, and knowledge about Crypto & Web3.</p>
+  </section>
+
+  <!-- Blog Cards -->
+  <section class="blog-list">
+    <div class="blog-card">
+      <h3>What is Web3?</h3>
+      <p>Pengenalan dasar tentang Web3 dan bagaimana masa depan internet berkembang.</p>
+      <a href="#">Read More →</a>
+    </div>
+
+    <div class="blog-card">
+      <h3>Getting Started With Crypto</h3>
+      <p>Panduan untuk pemula yang ingin masuk ke dunia cryptocurrency dengan aman.</p>
+      <a href="#">Read More →</a>
+    </div>
+
+    <div class="blog-card">
+      <h3>Blockchain Explained</h3>
+      <p>Penjelasan sederhana tentang teknologi blockchain dan cara kerjanya.</p>
+      <a href="#">Read More →</a>
+    </div>
+  </section>
+
+</body>
+</html>
