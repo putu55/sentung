@@ -115,7 +115,13 @@ html {
   top: 40px;
   left: 20px;
 }
-
+.t3 {
+  transform: rotate(-3deg);
+  top: 80px;
+  left: 0px;
+  animation: float1 8s ease-in-out infinite;
+}
+  
 .tilt:hover {
   animation-play-state: paused;
   transform: scale(1.05);
@@ -199,24 +205,6 @@ nav a:hover {
   color: #7cf5ff;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-  background: radial-gradient(circle at top, #1b1b3a, #0b0b14);
-}
-
-  
-
-.hero h2 {
-  font-size: 48px;
-}
-
-.hero p {
-  max-width: 650px;
-  margin: 20px auto;
-  opacity: 0.8;
-}
 
 .btn {
   padding: 15px 35px;
@@ -289,21 +277,6 @@ footer {
 }
 </style>
 </head>
-
-  <script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-document.querySelectorAll("section").forEach(sec => {
-  sec.classList.add("fade-in");
-  observer.observe(sec);
-});
-</script>
 
 <body>
 
@@ -424,6 +397,21 @@ document.querySelectorAll("section").forEach(sec => {
 <footer>
   © 2026 sentung
 </footer>
+ <script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
 
+document.querySelectorAll("section").forEach(sec => {
+  sec.classList.add("fade-in");
+  observer.observe(sec);
+});
+</script>
+
+  
 </body>
 </html>
