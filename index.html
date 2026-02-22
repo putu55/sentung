@@ -274,7 +274,36 @@ nav {
   padding: 100px 30px;
   transition: 0.4s;
 }
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 10000;
+}
 
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #7cf5ff;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+/* Animasi jadi X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 nav a {
   margin-bottom: 20px;
   color: #fff;
@@ -355,12 +384,11 @@ footer {
 <header>
   <h1>sentung</h1>
 
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
+  <div class="hamburger" id="burger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
   <nav id="navMenu">
     <a href="#about">About</a>
     <a href="blog.html">Blog</a>
@@ -490,9 +518,13 @@ document.querySelectorAll("section").forEach(sec => {
 </script>
   
 <script>
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("active");
-}
+const burger = document.getElementById("burger");
+const nav = document.getElementById("navMenu");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+});
 </script>
   
 </body>
