@@ -20,7 +20,25 @@
 }
 
 .hero-text h2 {
-  font-size: 48px;
+  font-size: 52px;
+  background: linear-gradient(135deg, #7cf5ff, #8f7cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+  body::before {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124,245,255,0.15), transparent 70%);
+  top: -200px;
+  right: -200px;
+  z-index: -1;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .hero-text p {
@@ -34,6 +52,17 @@
   height: 350px;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
 .tilt {
   position: absolute;
   width: 100%;
@@ -190,9 +219,9 @@ section {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(124,245,255,0.2);
 }
-
 /* FORM */
 form {
   max-width: 500px;
@@ -227,6 +256,21 @@ footer {
 }
 </style>
 </head>
+
+  <script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll("section").forEach(sec => {
+  sec.classList.add("fade-in");
+  observer.observe(sec);
+});
+</script>
 
 <body>
 
